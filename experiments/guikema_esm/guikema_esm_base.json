@@ -1,0 +1,39 @@
+{
+  "experiment_root": "INSERT VALUE",
+  "predict_model": true,
+  "experiment_name": "esm_guikema",
+  "mlflow_uri": "INSERT VALUE",
+  "mlflow_artifacts_uri": "INSERT VALUE",
+  "env_fpath": "INSERT VALUE",
+  "global_seed": 1234,
+  "trainer_params": {
+    "accelerator": "gpu",
+    "strategy": "dp"
+  },
+  "models": {
+    "model": "EmbeddingPredictor",
+    "model_params": {},
+    "submodels": {
+      "embedding": {
+        "model": "ESMEmbeddingModel",
+        "model_params": {
+          "model_id": "esm2_t6_8M_UR50D",
+          "repr_layer": 6
+        }
+      }
+    }
+  },
+  "data": {
+    "dataset": "guikema_to_esm",
+    "dataset_params": {
+      "batch_size": 256,
+      "sequence_column": "Sequence_AA",
+      "id_column": "Sequence ID",
+      "model_id": "esm2_t6_8M_UR50D",
+      "file_number": 0,
+      "total_splits": 5,
+      "current_split": 0,
+      "num_workers": 8
+    }
+  }
+}

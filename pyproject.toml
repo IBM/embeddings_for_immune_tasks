@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "immune_embeddings"
+description = "Some words about this project."
+authors = [
+    { name = "Nicolas Deutschmann", email = "deu@zurich.ibm.com" },
+    { name = "Anna Weber", email = "wbr@zurich.ibm.com" },
+    { name = "Aurelien Pelissier", email = "pel@zurich.ibm.com" },
+]
+readme = "README.md"
+requires-python = ">=3.7, <3.11"
+dependencies = [
+    "click",
+    "fair-esm",
+    "mlflow",
+    "numpy",
+    "pandas",
+    "python-dotenv",
+    "pytorch_lightning",
+    "scikit_learn",
+    "scipy",
+    "sentence_transformers",
+    "statsmodels",
+    "torch",
+    "torchmetrics",
+    "tqdm"
+]
+dynamic = ["version"]

@@ -1,0 +1,29 @@
+{
+  "train_model": true,
+  "validate_model": true,
+  "test_model": true,
+  "predict_model": false,
+  "experiment_name": "INSERT VALUE",
+  "mlflow_uri": "INSERT VALUE",
+  "mlflow_artifacts_uri": "INSERT VALUE",
+  "env_fpath": "INSERT VALUE",
+  "trainer_params": {"max_epochs": 2000, "accelerator": "gpu"},
+  "checkpoint_params": { "monitor": "val/loss", "save_top_k": 1 },
+  "early_stopping": true,
+  "early_stopping_params": { "patience": 20, "monitor": "val/loss" },
+  "models": {
+    "model": "Regressor",
+    "model_params": { "lr": 0.001 },
+    "submodels": {
+      "model": {
+        "model": "MLP",
+        "model_params": { "in_dim": 2560, "out_dim": 1, "layers": [ 128, 32 ], "dropout": 0.02 }
+      }
+    }
+  },
+  "data": {
+    "dataset": "covid_affinity_esm",
+    "dataset_params": { "model_size": "650M", "layer_repr": 6, "flatten_pa": false, "label_jiggle": 0.05,
+      "batch_size": 128, "num_workers": 16, "seed": 123 }
+  }
+}

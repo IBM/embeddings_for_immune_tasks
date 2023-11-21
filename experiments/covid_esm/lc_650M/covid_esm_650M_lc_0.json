@@ -1,0 +1,25 @@
+{
+  "experiment_root": "INSERT VALUE",
+  "predict_model": true,
+  "experiment_name": "esm_covid_lc",
+  "mlflow_uri": "INSERT VALUE",
+  "mlflow_artifacts_uri": "INSERT VALUE",
+  "env_fpath": "INSERT VALUE",
+  "global_seed": 1234,
+  "trainer_params": { "accelerator": "gpu", "strategy": "dp" },
+  "models": {
+    "model": "EmbeddingPredictor",
+    "model_params": {},
+    "submodels": {
+      "embedding": {
+        "model": "ESMEmbeddingModel",
+        "model_params": { "model_id": "esm2_t33_650M_UR50D", "repr_layer": 33 }
+      }
+    }
+  },
+  "data": {
+    "dataset": "covid_to_esm",
+    "dataset_params": { "batch_size": 256, "sequence_column": "LC", "id_column": "lc_uuid",
+      "model_id": "esm2_t33_650M_UR50D", "num_workers": 8, "total_splits": 5, "current_split": 0 }
+  }
+}
