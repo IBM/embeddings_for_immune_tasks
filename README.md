@@ -31,3 +31,22 @@ python -m immune_embeddings.pipelines --config experiments/covid_affinity_esm/co
 
 We do not distribute the original data used for our experiments. We however provide the directory structure of a data
 directory as the `data` directory, where text files specify where to obtain data and how to format it.
+
+## Citation
+
+*Do Domain-Specific Protein Language Models Outperform General Models on Immunology-Related Tasks?*
+Nicolas Deutschmann, Aurelien Pelissier, Anna Weber, Shuaijun Gao, Jasmina Bogojeska, María Rodríguez Martínez
+
+```bibtex
+@article {Deutschmann2023.10.17.562795,
+	author = {Nicolas Deutschmann and Aurelien Pelissier and Anna Weber and Shuaijun Gao and Jasmina Bogojeska and Mar{\'\i}a Rodr{\'\i}guez Mart{\'\i}nez},
+	title = {Do Domain-Specific Protein Language Models Outperform General Models on Immunology-Related Tasks?},
+	elocation-id = {2023.10.17.562795},
+	year = {2023},
+	doi = {10.1101/2023.10.17.562795},
+	publisher = {Cold Spring Harbor Laboratory},
+	URL = {https://www.biorxiv.org/content/early/2023/10/26/2023.10.17.562795},
+	eprint = {https://www.biorxiv.org/content/early/2023/10/26/2023.10.17.562795.full.pdf},
+	journal = {bioRxiv}
+}
+```
